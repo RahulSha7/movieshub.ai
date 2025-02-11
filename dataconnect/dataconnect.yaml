@@ -1,0 +1,12 @@
+specVersion: "v1beta"
+serviceId: "movieshubai"
+location: "us-central1"
+schema:
+  source: "./schema"
+  datasource:
+    postgresql:
+      database: "fdcdb"
+      cloudSql:
+        instanceId: "movieshubai-fdc"
+      # schemaValidation: "COMPATIBLE"
+connectorDirs: ["./connector"]

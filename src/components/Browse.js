@@ -4,10 +4,17 @@ import { signOut } from "firebase/auth";
 import { auth } from "../utils/firebase";
 import useNowPlayingMovies from "../hooks/useNowPlayingMovies";
 import MainContainer from "./MainContainer";
-import ListContainer from "./ListContainer";
+import SecondaryContainer from "./SecondaryContainer";
+import usePopularMovies from "../hooks/usePopularMovies";
+import useTopRatedMovies from "../hooks/useTopRatedMovies";
+import useUpcomingMovies from "../hooks/useUpcomingMovies";
+
 
 const Browse = () => {
  useNowPlayingMovies();
+ usePopularMovies();
+ useTopRatedMovies();
+ useUpcomingMovies();
   
 
 
@@ -22,9 +29,9 @@ const Browse = () => {
   };
  
  return (
-    <div className="flex   ">
+    <div className="   ">
       <Header />
-      {/* </Browse> */}
+     
       <div className="flex">
         <button
           className="font-bold cursor-pointer text-red-800 my-10 mx-6 z-20 right-0 absolute"
@@ -33,9 +40,14 @@ const Browse = () => {
           {" "}
           (Sign Out)
         </button>
+       
+      
       </div>
       <MainContainer/>
-      <ListContainer/>
+      <SecondaryContainer/>
+      
+    
+      
     </div>
   );
 };

@@ -1,20 +1,19 @@
 import React from 'react'
 import GptSearchBar from './gptSearchBar'
-import GptMovieSuggestion from './gptMovieSuggestion'
+import GptMovieSuggestions from './GptMovieSuggestion'
 import { Background_Image } from '../utils/constants'
 
 const GptSearch = () => {
   return (
-    <div>
-         <div className="absolute -z-10">
-                <img
-                  src={Background_Image}
-                  alt="background_image"
-                />
-              </div>
-      <GptSearchBar/>
-      <GptMovieSuggestion/>
+    <>
+    <div className="fixed -z-10">
+      <img className="h-screen object-cover md:w-screen" src={Background_Image} alt="logo" />
     </div>
+    <div className="">
+      <GptSearchBar />
+      <GptMovieSuggestions />
+    </div>
+  </>
   )
 }
 

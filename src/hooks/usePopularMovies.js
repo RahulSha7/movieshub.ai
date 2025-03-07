@@ -20,7 +20,8 @@ const usePopularMovies = () => {
     dispatch(addPopularMovies(data.results));
   };
   useEffect(() => {
-   !getPopularMovies &&  popularMovies();
+{  /*  !getPopularMovies &&*/}
+     popularMovies();
   }, []);
 };
 export default usePopularMovies;

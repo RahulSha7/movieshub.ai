@@ -20,7 +20,8 @@ const useUpcomingMovies = () => {
     dispatch(addUpcomingMovies(data.results));
   };
   useEffect(() => {
-   !getUpcomingMovies && upcomingMovies();
+   {/*!getUpcomingMovies &&*/} 
+   upcomingMovies();
   }, []);
 };
 export default useUpcomingMovies;

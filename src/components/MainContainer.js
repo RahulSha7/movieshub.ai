@@ -2,7 +2,7 @@ import React from 'react'
 import VideoBackground from './VideoBackground'
 import VideoTitle from './VideoTitle'
 import { useSelector } from 'react-redux'
-import SecondaryContainer from './SecondaryContainer'
+
 
 
 const MainContainer = () => {
